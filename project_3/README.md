@@ -48,6 +48,8 @@ Conclusion of EDA:
 1. We can potentially include tweet length, tweet word count, number of likes, and number of retweets as features to improve model performance, as we have seen that F1 and MotoGP tweets are consistently different in these features.
 2. We should remove URLs when preprocessing our data, before building our model.
 
+---
+
 ### Preprocessing
 
 In this section, we will be preprocessing our data so that we can build our model with clean data. We will try to remove urls, stopwords, quotation marks, emoticons, and other content in the tweets that are either noise, or not useful for building our model.

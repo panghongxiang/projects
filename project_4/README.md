@@ -6,6 +6,7 @@
 - [Dataset](#Dataset)
 - [Executive Summary](#Executive-Summary)
 - [Conclusion and Recommendation](#Conclusion-and-Recommendation)  
+- [Project Planning Documentation](#Project-Planning-Documentation)  
 
 ## Background
 
@@ -72,10 +73,22 @@ The training results demonstrated an average SMAPE of 33.2% for the first week p
     
 [Return to top](#Table-of-Contents)
 
-## Conclusion and Recommendation 
 
-
-
+## Conclusions and Recommendations 
+By predicting the number of dengue cases at a subzone level, we are able to put appropriate measures in place to minimize the risk of a dengue outbreak. Targeting specific subzones is cost-efficient and also provides a timely reaction by prioritizing the actions required for dengue hotspots. Singapore's healthcare system should be able to respond to any medical outbreak, however care should be taken not to stretch its relatively limited resources. From NEA's perspective, we would suggest looking into redistributing its Gravitraps to assess impact of dengue case reduction, as well as working towards a self-sustaining supply of Wolbachia mosquitoes to help limit the population of the Aedes species.
 
 [Return to top](#Table-of-Contents)  
+
+## Project Planning Documentation
+
+| Deliverables | Task Owner | Need Date |
+| :-: | :-: | :-: |
+| Webscraping | Song Kai | 2 April 2022 |
+| Data cleaning | Song Kai, Juliana | 7 April 2022 |
+| EDA | Juliana, Hong Xiang | 14 April 2022 |
+| Temporal modelling | Hong Xiang, Song Kai | 20 April 2022 |
+| Geospatial modelling | Juliana | 24 April 2022 |
+| Cost Benefit Analysis | Juliana, Hong Xiang, Song Kai | 26 April 2022 |
+| Project Report | Juliana, Hong Xiang, Song Kai | 28 April 2022 |
+| Presentation Slides | Juliana, Hong Xiang, Song Kai | 28 April 2022 |
 

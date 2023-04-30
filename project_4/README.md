@@ -5,11 +5,11 @@
 - [Problem Statement](#Problem-Statement) 
 - [Dataset](#Dataset)
 - [Executive Summary](#Executive-Summary)
-- [Conclusion and Recommendation](#Conclusion-and-Recommendation)  
+- [Conclusions and Recommendations](#Conclusions-and-Recommendations)  
 - [Project Planning Documentation](#Project-Planning-Documentation)  
 
 ## Background
-
+Dengue fever is a viral infection that spreads from the Aedes mosquito to people and is commonly found in tropical countries, including Singapore. The average lifespan of an Aedes mosquito is approximately 2 weeks and it takes approximately 8-10 days for an egg to evolve into an adult. A mosquito can lay eggs about three times in its lifetime, and about 100 eggs are produced each time. This increases the risk of dengue transmission due to the short time required for mosquitoes to breed and populate. Most people recover from dengue fever within a week or so. However in some cases, symptoms worsen and can become life-threatening. Since there is no specific treatment for dengue/severe dengue, therefore it is imperative to have preventive measures in place. These include vector control, detection/monitoring systems and medical care.
 
 [Return to top](#Table-of-Contents)  
 
@@ -32,7 +32,7 @@ We curated the dataset from:
 
 ### Exploratory Data Analysis (EDA)
 
-We first compared the weekly trend of google search terms against the number of dengue cases from 2015 to 2018, to identify potential predictors we can use in our model. In particular, we found that the google search trend for "dengue fever" followed quite closely to the dengue cases trend, with similar peaks occurring in 2014 and 2016. Hence, the search for "dengue fever" could be a strong predictor for number of dengues cases.
+We first compared the weekly trend of google search terms against the number of dengue cases from 2014 to 2018, to identify potential predictors we can use in our model. In particular, we found that the google search trend for "dengue fever" followed quite closely to the dengue cases trend, with similar peaks occurring in 2014 and 2016. Hence, the search for "dengue fever" could be a strong predictor for number of dengues cases.
 
 <img src="images/dengue_fever_trend.png" width="600"/>
 
@@ -54,7 +54,7 @@ XGBoost regressor was selected as the model used to predict overall weekly numbe
 
 Our initial model returned a RMSE of 45.58, with the google search of "dengue fever" showing a strong impact in the prediction. However, when retraining our model with lagged features, we found that the number of dengue cases in the previous week became the dominant feature, with RMSE improving to 16.66. This suggests a strong autoregression present in the data, which we took tried to account for in our spatial level modeling.
 
-<img src="images/model_result.png" width="600"/>
+<img src="images/model_result.png" width="1000"/>
 
 The forecasting algorithm used processed data on dengue clusters with subzones during the geospatial EDA phase. LightGBM regressor was selected as the prediction model, and the data were split into training (80%) and testing (20%) sets for out-of-sample validation based on the time period. Within the training set, 30% of the data was further partitioned as the validation set during training. The Symmetric Mean Absolute Percentage Error (SMAPE) was calculated and compared for the prediction and baseline (lag1) using the validation set during training.
 
@@ -92,3 +92,4 @@ By predicting the number of dengue cases at a subzone level, we are able to put 
 | Project Report | Juliana, Hong Xiang, Song Kai | 28 April 2022 |
 | Presentation Slides | Juliana, Hong Xiang, Song Kai | 28 April 2022 |
 
+[Return to top](#Table-of-Contents)
